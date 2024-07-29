@@ -15,8 +15,8 @@ public class Buildingserviceimpl implements BuildingService{
 	@Autowired
 	private BuildingRepository buildingRepository;
 	@Override
-	public List<BeanAPI> findALl(String name,Long districtid,List<String> typeCode) {
-		List <BuildingEntity> buildingEntities =  buildingRepository.findAll(name,districtid, typeCode);
+	public List<BeanAPI> findALl(String name,Long districtid) {
+		List <BuildingEntity> buildingEntities =  buildingRepository.findAll(name,districtid);
 		List<BeanAPI> bean = new ArrayList<>();
 		for (BuildingEntity en : buildingEntities) {
 			BeanAPI a = new BeanAPI();

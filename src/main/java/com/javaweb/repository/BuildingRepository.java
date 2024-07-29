@@ -3,5 +3,5 @@ package com.javaweb.repository;
 import com.javaweb.repository.enity.BuildingEntity;
 
 public interface BuildingRepository {
- List<BuildingEntity> findAll(String name , Long districtid,List<String> typeCode);
+ List<BuildingEntity> findAll(String name , Long districtid);
 }
