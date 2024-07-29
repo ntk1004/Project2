@@ -32,7 +32,7 @@ public class Building {
 @GetMapping("/api/building/")
 	public List<BeanAPI> requestMethodName(@RequestParam (value="name", required = false) String name,
 			                               @RequestParam (value="districtid", required = false) Long districtid,
-			                               @RequestParam (value="typeCode", required = false) List<String> typecode )  {
+			                               @RequestParam (value="typeCode", required = false) List<String> typeCode )  {
 		List<BeanAPI> li = buildingservice.findALl(name,districtid);
 
 		return li;
