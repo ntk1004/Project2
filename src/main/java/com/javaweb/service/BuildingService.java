@@ -5,5 +5,5 @@ import java.util.List;
 import com.javaweb.modol.BeanAPI;
 
 public interface BuildingService {
-List <BeanAPI> findALl (String name);
+List <BeanAPI> findALl (String name, Long districtid,List<String> typeCode);
 }

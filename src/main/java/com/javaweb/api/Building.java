@@ -30,8 +30,10 @@ public class Building {
 	@Autowired
 	private BuildingService buildingservice;
 @GetMapping("/api/building/")
-	public List<BeanAPI> requestMethodName(@RequestParam (value="name") String name )  {
-		List<BeanAPI> li = buildingservice.findALl(name);
+	public List<BeanAPI> requestMethodName(@RequestParam (value="name", required = false) String name,
+			                               @RequestParam (value="districtid", required = false) Long districtid,
+			                               @RequestParam (value="typeCode", required = false) List<String> typeCode )  {
+		List<BeanAPI> li = buildingservice.findALl(name,districtid, typeCode);
 
 		return li;
 	}
